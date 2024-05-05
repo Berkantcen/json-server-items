@@ -12,6 +12,10 @@ app.use(cors()); // Use the cors middleware
 // Sample data
 let items = [];
 
+app.get('/', (req, res) => {
+    res.send('Server is running');
+}); // Default route
+
 // CRUD Routes
 app.get('/items', (req, res) => {
     res.json(items);
